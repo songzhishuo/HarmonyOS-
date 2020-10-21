@@ -33,9 +33,15 @@ https://www.colabug.com/2020/0407/7216390/
 # 3. JDK安装教程
 https://jingyan.baidu.com/article/ce09321b85e8d62bff858f93.html
 
+老子跑起来了：
 
+![image-20201021194746246](C:\Users\songz\Pictures\博客截图\image-20201021194746246.png)
 
-# HI3861的环境搭建
+------
+
+# 以下为不完全沙雕随笔
+
+## HI3861的环境搭建
 
 在windows系统的 HarmonyOS IDE下的编译功能暂时是无法使用的（感觉华为在赶工期所以windows下的东西都没给全，目前官网的教程上也是采用了windosw下写代码，Linux去编译的方式），因此暂时只能按官网文档的教程去搭建。
 
@@ -49,3 +55,32 @@ https://bbs.elecfans.com/jishu_1998840_1_1.html
 
 
 
+## AT指令测试
+
+1. 在IPOP串口终端中，依次执行如下AT命令，启动STA模式，连接指定AP热点，并开启DHCP功能。
+
+   ```
+   1. AT+STARTSTA                             - 启动STA模式
+   2. AT+SCAN                                 - 扫描周边AP
+   3. AT+SCANRESULT                           - 显示扫描结果
+   4. AT+CONN="SSID",,2,"PASSWORD"            - 连接指定AP，其中SSID/PASSWORD为待连接的热点名称和密码
+   5. AT+STASTAT                              - 查看连接结果
+   6. AT+DHCP=wlan0,1                         - 通过DHCP向AP请求wlan0的IP地址
+   ```
+
+   
+
+2. 查看WLAN模组与网关联通是否正常，如下图所示。
+
+```
+1. AT+IFCFG                                - 查看模组接口IP
+2. AT+PING=X.X.X.X                         - 检查模组与网关的联通性，其中X.X.X.X需替换为实际的网关地址
+```
+
+
+
+# VScode串口使用中提示wsl无法使用的问题：
+
+解决方法
+
+https://blog.csdn.net/jesse_pan/article/details/88200477?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param
