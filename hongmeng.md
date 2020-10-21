@@ -37,4 +37,7 @@ https://jingyan.baidu.com/article/ce09321b85e8d62bff858f93.html
 
 # HI3861的环境搭建
 
-在实际的使用中windows系统HarmonyOS IDE下的编译是无法使用的
+在windows系统的 HarmonyOS IDE下的编译功能暂时是无法使用的（感觉华为在赶工期所以windows下的东西都没给全，目前官网的教程上也是采用了windosw下写代码，Linux去编译的方式），因此暂时只能按官网文档的教程去搭建。
+
+在搭建的过程中可以将apt以及python的pip更换成国内源来提高下载速度。或者采用群友们的docker一键搭建环境工具（未验证）。
+
