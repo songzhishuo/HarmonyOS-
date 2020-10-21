@@ -41,3 +41,7 @@ https://jingyan.baidu.com/article/ce09321b85e8d62bff858f93.html
 
 在搭建的过程中可以将apt以及python的pip更换成国内源来提高下载速度。或者采用群友们的docker一键搭建环境工具（未验证）。
 
+
+
+
+
